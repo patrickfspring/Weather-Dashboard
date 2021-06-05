@@ -6,9 +6,25 @@
   <title>Bootstrap Components</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {background-color: #f1eded;
+    }
+    #master-container {margin:0px
+    }
+    #left-container {float:left;
+                     height:400px;
+                     width:50%;
+                     margin:0px
+    }
+    #right-container {float:right;
+                      height:400px;
+                      width:50%;
+                      margin:0px
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: grey;">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f1eded;">
     <a class="navbar-brand" href="#">Latitude</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -16,61 +32,81 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Latitude <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Plots
           </a>
-          <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Max Temperature</a>
-              <a class="dropdown-item" href="#">Humidity</a>
-              <a class="dropdown-item" href="#">Cloudiness</a>
-              <a class="dropdown-item" href="#">Wind Speed</a> 
+          <div class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" onclick="window.location.href='index.html'" href="#">Max Temperature</a>
+              <a class="dropdown-item" onclick="window.location.href='index.html'" href="#">Humidity</a>
+              <a class="dropdown-item" onclick="window.location.href='index.html'" href="#">Cloudiness</a>
+              <a class="dropdown-item" onclick="window.location.href='index.html'" href="#">Wind Speed</a> 
               <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Comparison</a>
+            <a class="dropdown-item" onclick="window.location.href='Comparison Page.html'" href="#">Comparison</a>
             <a class="dropdown-item" href="#">Data</a>
           </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Latitude <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" onclick="window.location.href='Comparison Page.html'" href="#">Comparison</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Data</a>
         </li>
       </ul>
     </div>
   </nav>
 
-<div class="container">
-  <h3 class="text-left">Comparison: Latitude vs X</h3>
-    <p>Click any plot to get an in-depth analysis.</p>
-    <div class="row">
-      <div class="col-md-6">
-          <h3 class="text-center">vs. Max Temperature</h3>  
-          <div class="thumbnail">
-            <img src="assets\images\Fig1.png" alt="..." class="img-thumbnail">
-          </div>
+<div id = "master-container">
+  <div id = "left-container">
+    <style>
+      div {background-color: #ffffff;}
+    </style>
+    <h2 class="text-left">Summary: Latitude vs. X</h2>
+    <div class="clearfix">
+      <div class="row">
+        <div class="col-sm-2 img">
+          <img src="assets\images\Fig1.png" alt="..." class="img-thumbnail" onclick="window.location.href='index.html'">
+        </div>  
+        <div class="col-sm-4">
+          <p>The purpose of this project was to analyze how eather changes as you get closer to the equator. To accomplish
+            this analysis, we first pulled data from the OpenWeatherMapAPI to assemble a dataset on over 500 cities.  
+            After assembling the dataset, we used Matplotlib to plot various aspect of hte weather vs. latitude.  Factors we
+            looked at included: max temperature, cloudiness, wind speed, and humidty.  This site provides the source
+            data and graphs created as part of the analysis, as well as explanations and descriptions of any correlations
+            witnessed.
+          </p>
+        </div>  
       </div>
-      <div class="col-md-6"> 
-          <h3 class="text-center">vs. Humidity</h3>
-          <div class="thumbnail">
-            <img src="assets\images\Fig2.png" alt="..." class="img-thumbnail">
-          </div>
+    </div>
+  </div>
+  <div id = "right-container">
+    <style>
+      div {background-color: #ffffff;}
+    </style>
+    <h2 class="text-left">Visualizations</h2>
+    <div class="clearfix">
+      <div class="row">
+        <div class="col-sm-6 imgcont">
+          <img src="assets\images\Fig1.png" alt="..." class="img-thumbnail" width=90% height=90% onclick="window.location.href='index.html'">
+        </div>
+        <div class="col-sm-6 imgcont">
+            <img src="assets\images\Fig2.png" alt="..." class="img-thumbnail" width=90% height=90% onclick="window.location.href='index.html'">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 imgcont">  
+           <img src="assets\images\Fig3.png" alt="..." class="img-thumbnail" width=90% height=90% onclick="window.location.href='index.html'">
+        </div>
+        <div class="col-sm-6 imgcont">
+            <img src="assets\images\Fig4.png" alt="..." class="img-thumbnail" width=90% height=90% onclick="window.location.href='index.html'">
+        </div>
       </div>
     </div>
-  <div class="row">
-    <div class="col-md-6">  
-        <h3 class="text-center">vs. Cloudliness</h3>
-        <div class="thumbnail">
-          <img src="assets\images\Fig3.png" alt="..." class="img-thumbnail">
-        </div>
-    </div>
-    <div class="col-md-6">    
-        <div class="thumbnail">
-          <h3 class="text-center">vs. Wind Speed</h3>
-          <img src="assets\images\Fig4.png" alt="..." class="img-thumbnail">
-        </div>
-    </div>
-  </div>  
+  </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

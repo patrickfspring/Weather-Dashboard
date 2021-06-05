@@ -1,14 +1,39 @@
 .navbar-brand {
-  font-weight: 600;
-  font-family: 'Merriweather', serif;
+  font-weight: 750;
+  font-family: 'Times New Roman', Serif;
   font-size: 30px;
-  background-color: #109c85
+  color: white;
+  background-color: teal
+}
+.dropdown-menu-center {
+  left: 50% !important;
+  right: auto !important;
+  text-align: center !important;
+  transform: translate(-50%, 0) !important;
 }
 
-.navbar .navbar-brand li a {
-  color: #fff;
+.navbar-nav {
+  margin-left: 80%;
 }
 
-.navbar .navbar-brand a:hover {
-color: blue;
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+h2 {
+  color: teal;
+  font-weight: 550;
+  font-size: 25px;
+  font-family: 'Times New Roman', Serif; 
+}
+
+h3 {
+  color: teal;
+  font-weight: 550;
+  font-size: 20px;
+  font-family: 'Times New Roman', Serif; 
+}
+
+.imgcont {
+  padding: 0px
 }
