@@ -7,7 +7,23 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <style>
-    body {background-color: #ececec;}
+    body {background-color: #f1eded;
+    }
+
+    #master-container {margin:0px;
+                      display:flex;
+                      justify-content:center
+    }
+    #left-container {float:left;
+                     height:500px;
+                     width:50%;  
+                     margin:0px
+    }
+    #right-container {float:right;
+                      height:500px;
+                      width:45%; 
+                      margin:0px
+    }
   </style>
 </head>
 <body>
@@ -34,7 +50,10 @@
           </div>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Comparison <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Wind Speed <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" onclick="window.location.href='Comparison Page.html'" href="#">Comparison</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" onclick="window.location.href='index.html'" href="#">Data</a>
@@ -43,41 +62,45 @@
     </div>
   </nav>
 
-<div class="container">
-  <style>
-    div {background-color: #ffffff;}
-  </style>
-  <h2 class="text-left">Comparison: Latitude vs X</h2>
-    <p>Click any plot to get an in-depth analysis.</p>
-    <div class="row">
-      <div class="col-md-6">
-          <h3 class="text-center">vs. Max Temperature</h3>  
-          <div class="thumbnail">
-            <img src="assets\images\pfs_fig1.PNG" alt="..." class="img-thumbnail" onclick="window.location.href='Max Temperature Page.html'">
-          </div>
-      </div>
-      <div class="col-md-6"> 
-          <h3 class="text-center">vs. Humidity</h3>
-          <div class="thumbnail">
-            <img src="assets\images\pfs_fig2.PNG" alt="..." class="img-thumbnail" onclick="window.location.href='Humidity Page.html'">
-          </div>
-      </div>
-    </div>
-  <div class="row">
-    <div class="col-md-6">  
-        <h3 class="text-center">vs. Cloudliness</h3>
-        <div class="thumbnail">
-          <img src="assets\images\pfs_fig3.PNG" alt="..." class="img-thumbnail" onclick="window.location.href='Cloudiness Page.html'">
-        </div>
-    </div>
-    <div class="col-md-6">    
-        <div class="thumbnail">
-          <h3 class="text-center">vs. Wind Speed</h3>
+<div id = "master-container">
+  <div id = "left-container">
+    <style>
+      div {background-color: #ffffff;}
+    </style>
+    <h2 class="text-left">Wind Speed</h2>
+      <div class="row">
+        <div class="col-sm-4 img">
           <img src="assets\images\pfs_fig4.PNG" alt="..." class="img-thumbnail" onclick="window.location.href='Wind Speed Page.html'">
-        </div>
-    </div>
+        </div>  
+        <div class="col-sm-2">
+          <p>Wind speeds varied between still and up to 20-30mph across the northern and southern hemispheres. There were very few readings 
+            more than 30mph, which if they existed would probably indicate storm activity.</p>
+        </div>  
+      </div>
   </div>
-</div>
+  <div id = "right-container">
+    <style>
+      div {background-color: #ffffff;}
+    </style>
+    <h2 class="text-left">Visualizations</h2>
+      <div class="row">
+        <div class="col-sm-3 imgcont">
+          <img src="assets\images\pfs_fig1.PNG" alt="..." width=100% height=100% onclick="window.location.href='Max Temperature Page.html'">
+        </div>
+        <div class="col-sm-3 imgcont">
+            <img src="assets\images\pfs_fig2.PNG" alt="..." width=100% height=100% onclick="window.location.href='Humidity Page.html'">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 imgcont">  
+           <img src="assets\images\pfs_fig3.PNG" alt="..." width=100% height=100% onclick="window.location.href='Cloudiness Page.html'">
+        </div>
+        <div class="col-sm-3 imgcont">
+            <img src="assets\images\pfs_fig4.PNG" alt="..." width=100% height=100% onclick="window.location.href='Wind Speed Page.html'">
+        </div>
+      </div>
+  </div>
+</div>  
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

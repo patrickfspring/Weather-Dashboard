@@ -24,7 +24,7 @@
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f1eded;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Latitude</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -37,13 +37,13 @@
             Plots
           </a>
           <div class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" onclick="window.location.href='index.html'" href="#">Max Temperature</a>
-              <a class="dropdown-item" onclick="window.location.href='index.html'" href="#">Humidity</a>
-              <a class="dropdown-item" onclick="window.location.href='index.html'" href="#">Cloudiness</a>
-              <a class="dropdown-item" onclick="window.location.href='index.html'" href="#">Wind Speed</a> 
+              <a class="dropdown-item" onclick="window.location.href='Max Temperature Page.html'" href="#">Max Temperature</a>
+              <a class="dropdown-item" onclick="window.location.href='Humidity Page.html'" href="#">Humidity</a>
+              <a class="dropdown-item" onclick="window.location.href='Cloudiness Page.html'" href="#">Cloudiness</a>
+              <a class="dropdown-item" onclick="window.location.href='Wind Speed Page.html'" href="#">Wind Speed</a> 
               <div class="dropdown-divider"></div>
             <a class="dropdown-item" onclick="window.location.href='Comparison Page.html'" href="#">Comparison</a>
-            <a class="dropdown-item" href="#">Data</a>
+            <a class="dropdown-item" onclick="window.location.href='index.html'" href="#">Data</a>
           </div>
         </li>
         <li class="nav-item active">
@@ -53,7 +53,7 @@
           <a class="nav-link" onclick="window.location.href='Comparison Page.html'" href="#">Comparison</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Data</a>
+          <a class="nav-link" onclick="window.location.href='index.html'" href="#">Data</a>
         </li>
       </ul>
     </div>
@@ -68,12 +68,12 @@
     <div class="clearfix">
       <div class="row">
         <div class="col-sm-2 img">
-          <img src="assets\images\Fig1.png" alt="..." class="img-thumbnail" onclick="window.location.href='index.html'">
+          <img src="assets\images\pfs_fig1.PNG" alt="..." class="img-thumbnail" onclick="window.location.href='Max Temperature Page.html'">
         </div>  
         <div class="col-sm-4">
-          <p>The purpose of this project was to analyze how eather changes as you get closer to the equator. To accomplish
+          <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish
             this analysis, we first pulled data from the OpenWeatherMapAPI to assemble a dataset on over 500 cities.  
-            After assembling the dataset, we used Matplotlib to plot various aspect of hte weather vs. latitude.  Factors we
+            After assembling the data, we used Matplotlib to plot various aspect of hte weather vs. latitude.  Factors we
             looked at included: max temperature, cloudiness, wind speed, and humidty.  This site provides the source
             data and graphs created as part of the analysis, as well as explanations and descriptions of any correlations
             witnessed.
@@ -90,18 +90,18 @@
     <div class="clearfix">
       <div class="row">
         <div class="col-sm-6 imgcont">
-          <img src="assets\images\Fig1.png" alt="..." class="img-thumbnail" width=90% height=90% onclick="window.location.href='index.html'">
+          <img src="assets\images\pfs_fig1.PNG" alt="..." class="img-thumbnail" width=90% height=90% onclick="window.location.href='Max Temperature Page.html'">
         </div>
         <div class="col-sm-6 imgcont">
-            <img src="assets\images\Fig2.png" alt="..." class="img-thumbnail" width=90% height=90% onclick="window.location.href='index.html'">
+            <img src="assets\images\pfs_fig2.PNG" alt="..." class="img-thumbnail" width=90% height=90% onclick="window.location.href='Humidity Page.html'">
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 imgcont">  
-           <img src="assets\images\Fig3.png" alt="..." class="img-thumbnail" width=90% height=90% onclick="window.location.href='index.html'">
+           <img src="assets\images\pfs_fig3.PNG" alt="..." class="img-thumbnail" width=90% height=90% onclick="window.location.href='Cloudiness Page.html'">
         </div>
         <div class="col-sm-6 imgcont">
-            <img src="assets\images\Fig4.png" alt="..." class="img-thumbnail" width=90% height=90% onclick="window.location.href='index.html'">
+            <img src="assets\images\pfs_fig4.PNG" alt="..." class="img-thumbnail" width=90% height=90% onclick="window.location.href='Wind Speed Page.html'">
         </div>
       </div>
     </div>
